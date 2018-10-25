@@ -2,8 +2,8 @@
 
 one:
   user: one
-  description: MyText
+  caption: MyText
 
 two:
   user: two
-  description: MyText
+  caption: MyText
