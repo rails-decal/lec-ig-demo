@@ -18,7 +18,8 @@
                 <p class="info">
                     Logged in as <strong><%= current_user.email %></strong>.
                 </p>
-                <%= link_to 'Home', root_path %>
+                <%= link_to 'Home 🏠', root_path %>
+                <%= link_to 'New Post 🏙', new_post_path %>
                 <%= link_to 'Edit profile', edit_user_registration_path%>
                 <%= link_to "Logout", destroy_user_session_path, method: :delete %>
               <% else %>

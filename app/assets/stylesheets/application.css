@@ -73,3 +73,18 @@ input {
     cursor: text;
     padding: 1px;
 }
+
+textarea {
+    border: none;
+    border-bottom: 2px solid #e9e9e9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    height: 50px;
+    transition: border-color 0.3s;
+    width: 100%;
+    margin: 10px 0;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+}
