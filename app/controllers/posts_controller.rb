@@ -21,6 +21,17 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def like
+    @post = Post.find(params[:id]) # or, @post = Post.find_by(id: params[:id])
+    @like = Like.find_by(user: current_user, post: @post)
+    if @like.nil?
+      @like = Like.create(user: current_user, post: @post)
+    else
+      @like.destroy
+    end
+    redirect_to posts_path # or, redirect_to "/posts"
+  end
+
   # POST /posts
   # POST /posts.json
   def create

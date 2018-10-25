@@ -9,7 +9,7 @@
             <h2><%= post.user.first_name %> <%= post.user.last_name %></p>
             <img src="#" />
             <p><%= post.caption %></p>
-            <%# button_to 'Like', like_path(post) %>
+            <%= link_to "Like (#{post.users_liked.length})", like_path(post), method: :patch %>
             <% if current_user.id == post.user.id %>
                 <%= link_to 'Show', post %>
                 <%= link_to 'Edit', edit_post_path(post) %>
