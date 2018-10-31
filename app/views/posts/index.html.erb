@@ -7,8 +7,11 @@
     <% @posts.each do |post| %>
         <div class="post">
             <h2><%= post.user.first_name %> <%= post.user.last_name %></p>
-            <img src="#" />
+            <!-- <img src="#" /> -->
             <p><%= post.caption %></p>
+            <% if not post.photo.attachment.nil? %>
+                <%= image_tag post.photo, style: 'max-width: 500px' %>
+            <% end %>
             <%= link_to "Like (#{post.users_liked.length})", like_path(post), method: :patch %>
             <% if current_user.id == post.user.id %>
                 <%= link_to 'Show', post %>
